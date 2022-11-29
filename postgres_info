@@ -1,0 +1,36 @@
+# Установка пакета постгрес
+sudo apt update
+sudo apt-get install postgresql
+
+# Перейти на консоль постгрес 
+
+sudo -i -u postgres
+
+createdb weight # Создать ДБ 
+
+psql weight # Чтобы можно было писать запросы
+
+
+# Создадим табличку
+CREATE TABLE weightindications (
+    id serial PRIMARY KEY,
+    indate TIMESTAMP NOT NULL,
+    weight FLOAT NOT NULL,
+    address SMALLINT NOT NULL
+);
+
+# Меняем пароль
+ALTER ROLE postgres WITH PASSWORD '123';
+
+SELECT * FROM weightindications; # Для проверки записанных строк
+
+# Даст информацию о подключение к ДБ 
+\сonninfo
+# ДАст информацию о таблице
+\d 
+
+# Очистит таблицу
+DELETE FROM weightindications;
+# Удаляет полностью таблицу с колонками
+DROP TABLE IF EXISTS weightindications;
+# Можно потом опять CREATE запрос отправить и индексы обновятся (опять с нуля будет)

@@ -1,0 +1,30 @@
+# Запуск приложения (открыть терминал в директории где находится launcher.sh) ####
+chmod +x launcher.sh
+./launcher.sh
+########################
+
+# !ЗАКРЫВАЙТЕ желательно приложение через ввод exit. Если не получилось то ctrl d или ctrl с
+
+# Если программа не считывает значение с порта
+
+sudo -s
+
+cd /usr/lib/udev/rules.d
+
+nano 85-brltty.rules
+#Находите ENV{PRODUCT}=="1a86/7523/*", ENV{BRLTTY_BRAILLE_DRIVER}="bm", GOTO="brltty_usb_run"
+# И комментируете с помощью #
+
+# Cntrl X, длаее Y, далее Enter
+# Перезапуск
+##########
+
+
+# Если при запуске приложения пишет что, dev/tty* denied
+
+sudo adduser $USER dialout
+
+# Перезапуск
+
+
+

@@ -1,0 +1,11 @@
+# Заходим ShowApplications (это кнопка справа в нижнем углу обычно)
+# Находим приложение Startup Applications
+# Нажимаем на кнопку Add
+# Заполняем name как угодно
+# В поле command пишем gnome-terminal --working-directory=/home/sardor/RiderProjects/DadProjects/Comport/Comport -- bash -c "./launcher.sh; exec bash"
+# Где в working_directory вместо /home/sardor/RiderProjects/DadProjects/Comport/Comport нужен путь к папке с launcher приложения
+# Кнопку Save и все!
+# UPD в первый раз нужно самому запустить приложение.
+
+
+
